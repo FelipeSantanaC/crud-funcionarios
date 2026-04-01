@@ -5,8 +5,12 @@ class Settings(BaseSettings):
     POSTGRES_USER: str
     POSTGRES_PASSWORD: str
     POSTGRES_DB: str
-    DB_HOST: str = "localhost"
-    DB_PORT: str = "5432"
+    DB_HOST: str
+    DB_PORT: str
+
+    SECRET_KEY: str
+    ALGORITHM: str
+    ACCESS_TOKEN_EXPIRE_MINUTES: int
 
     @property
     def DATABASE_URL(self) -> str:
